@@ -15,6 +15,6 @@
     "node_modules"
   ],
   "files": [
-    "./lib/ng2-select2.ts"
+    "./lib/sps-angular-select2.ts"
   ]
 }

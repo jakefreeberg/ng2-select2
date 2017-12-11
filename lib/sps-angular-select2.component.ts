@@ -3,7 +3,7 @@ import {
     Output, SimpleChanges, ViewChild, ViewEncapsulation, Renderer, OnInit
 } from '@angular/core';
 
-import { Select2OptionData } from './ng2-select2.interface';
+import { Select2OptionData } from './sps-angular-select2.interface';
 
 @Component({
     selector: 'select2',
@@ -24,9 +24,6 @@ export class Select2Component implements AfterViewInit, OnChanges, OnDestroy, On
     // value for select2
     @Input() value: string | string[];
 
-    // enable / disable default style for select2
-    @Input() cssImport: boolean = false;
-
     // width of select2 input
     @Input() width: string;
 
@@ -45,18 +42,7 @@ export class Select2Component implements AfterViewInit, OnChanges, OnDestroy, On
     constructor(private renderer: Renderer) { }
 
     ngOnInit() {
-        if(this.cssImport) {
-            const head = document.getElementsByTagName('head')[0];
-            const link: any = head.children[head.children.length-1];
-
-            if(!link.version) {
-                const newLink = this.renderer.createElement(head, 'style');
-                this.renderer.setElementProperty(newLink, 'type', 'text/css');
-                this.renderer.setElementProperty(newLink, 'version', 'select2');
-                this.renderer.setElementProperty(newLink, 'innerHTML', this.style);
-            }
-
-        }
+        
     }
 
     ngOnChanges(changes: SimpleChanges) {
@@ -165,5 +151,4 @@ export class Select2Component implements AfterViewInit, OnChanges, OnDestroy, On
         this.element.trigger('change.select2');
     }
 
-    private style: string = `CSS`;
 }

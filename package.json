@@ -1,15 +1,15 @@
 {
-  "name": "ng2-select2",
+  "name": "sps-angular-select2",
   "version": "1.0.0",
   "description": "SPS's Angular wrapper for select2",
-  "main": "ng2-select2.bundle.js",
-  "jsnext:main": "ng2-select2.js",
-  "typings": "ng2-select2.d.ts",
-  "module": "ng2-select2.js",
-  "types": "ng2-select2.d.ts",
+  "main": "sps-angular-select2.bundle.js",
+  "jsnext:main": "sps-angular-select2.js",
+  "typings": "sps-angular-select2.d.ts",
+  "module": "sps-angular-select2.js",
+  "types": "sps-angular-select2.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JakeFreeberg/ng2-select2.git"
+    "url": "https://github.com/JakeFreeberg/sps-angular-select2.git"
   },
   "keywords": [
     "angular2",
@@ -19,27 +19,27 @@
   "author": "Nejc Zdovc <nejc.zdovc@3zsistemi.si>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JakeFreeberg/ng2-select2/issues"
+    "url": "https://github.com/JakeFreeberg/sps-angular-select2/issues"
   },
-  "homepage": "https://github.com/JakeFreeberg/ng2-select2",
+  "homepage": "https://github.com/JakeFreeberg/sps-angular-select2",
   "scripts": {
-    "finish": "mv lib/ng2-select2.component.ts.bak lib/ng2-select2.component.ts && cp README.md dist && rimraf dist/ng2-select2.component.css",
-    "build": "rimraf dist && ts-node tools/inline-styles.ts && tsc -p tsconfig-esm.json && rollup -c rollup.config.js dist/ng2-select2.js > dist/ng2-select2.bundle.js && cp package.json dist && ts-node tools/cleanup.ts && ngc -c tsconfig-esm.json && npm run finish"
+    "finish": "mv lib/sps-angular-select2.component.ts.bak lib/sps-angular-select2.component.ts && cp README.md dist && rimraf dist/sps-angular-select2.component.css",
+    "build": "rimraf dist && ts-node tools/inline-styles.ts && tsc -p tsconfig-esm.json && rollup -c rollup.config.js dist/sps-angular-select2.js > dist/sps-angular-select2.bundle.js && cp package.json dist && ts-node tools/cleanup.ts && ngc -c tsconfig-esm.json && npm run finish"
   },
   "dependencies": {
     "@types/jquery": "^2.0.39",
     "@types/select2": "^4.0.31"
   },
   "peerDependencies": {
-    "@angular/core": ">=2.2.0"
+    "@angular/core": ">=5.0.5"
   },
   "devDependencies": {
-    "@angular/common": "^2.4.4",
-    "@angular/compiler": "^2.4.4",
-    "@angular/compiler-cli": "^2.4.4",
-    "@angular/core": "^2.4.4",
-    "@angular/platform-browser": "^2.4.4",
-    "@angular/platform-browser-dynamic": "^2.4.4",
+    "@angular/common": "^5.0.5",
+    "@angular/compiler": "^5.0.5",
+    "@angular/compiler-cli": "^5.0.5",
+    "@angular/core": "^5.0.5",
+    "@angular/platform-browser": "^5.0.5",
+    "@angular/platform-browser-dynamic": "^5.0.5",
     "@types/node": "^7.0.0",
     "core-js": "^2.4.1",
     "rimraf": "^2.5.4",
